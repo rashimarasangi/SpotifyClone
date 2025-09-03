@@ -17,6 +17,28 @@ const Navbar = () => {
             alt=""
           />
         </div>
+        <div className="flex items-center gap-4">
+          <p className="hidden md:block bg-white text-black text-[15px] rounded-2xl p-1 cursor-pointer">
+            Explore Premium
+          </p>
+          <p className="hidden md:block bg-black text-white text-[15px] rounded-2xl p-1 cursor-pointer">
+            Install App
+          </p>
+          <p className="bg-purple-500 text-black w-7 h-7 rounded-full flex items-center justify-center">
+            D
+          </p>
+        </div>
+      </div>
+      <div className="flex items-center gap-2 mt-4">
+        <p className="bg-white cursor-pointer text-black px-4 py-1 rounded-2xl">
+          All
+        </p>
+        <p className="bg-black cursor-pointer text-white px-4 py-1 rounded-2xl">
+          Music
+        </p>
+        <p className="bg-black cursor-pointer text-white px-4 py-1 rounded-2xl">
+          Podcasts
+        </p>
       </div>
     </nav>
   );
