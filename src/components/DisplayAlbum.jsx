@@ -2,9 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import { albumsData, assets, songsData } from "../assets/assets";
+import { useAppContext } from "../context/AppContext";
 
 const DisplayAlbum = () => {
   const { id } = useParams();
+  const { playWithId } = useAppContext();
   const albumData = albumsData[id];
   return (
     <div
@@ -44,6 +46,7 @@ const DisplayAlbum = () => {
       <hr />
       {songsData.map((item) => (
         <div
+          onClick={() => playWithId(item.id)}
           key={item.id}
           className="grid grid-cols-3 sm:grid-cols-4 mt-2 pl-2  items-center hover:bg-[#262626] cursor-pointer">
           <p className="text-white">
